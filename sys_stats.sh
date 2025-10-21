@@ -20,8 +20,10 @@
     
     
 # Output the following information to a file called disk.html
-    # 1. All disks
-    # 2. The output should include html tags, i.e. <html></html>
+    # 1. All disks 
+    touch disk.html 
+    # 4. The output should include html tags, i.e. <html></html>
+    sudo lshw -class disk -html > disk.html
 
 
 # Output the following information to a file called cpu
@@ -31,10 +33,12 @@
 
 # Output the following information to a file called block_dev
     # 1. Only the name, size, and type of the block devices
+    touch block_dev
     # 2. The output should use ascii characters for any tree formatting
+    lsblk -o NAME,SIZE,TYPE > block_dev.txt
     
     
 # Output the following information to a file called sata
-    # 1. Any Sata devices connected to the machine along with human readable sizes of the devices
+    # 1. Any Sata devices connected to the machine along with human readable sizes of the device
     # 2. More specific information about each device that is connected to the machine
     
