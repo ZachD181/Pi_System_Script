@@ -21,8 +21,8 @@
     
 # Output the following information to a file called disk.html
     # 1. All disks 
-    touch disk.html 
     # 2. The output should include html tags, i.e. <html></html>
+    touch disk.html
     sudo lshw -class disk -html > disk.html
 
 
@@ -33,8 +33,8 @@
 
 # Output the following information to a file called block_dev
     # 1. Only the name, size, and type of the block devices
-    touch block_dev
     # 2. The output should use ascii characters for any tree formatting
+    touch block_dev
     lsblk -o NAME,SIZE,TYPE > block_dev.txt
     
     
